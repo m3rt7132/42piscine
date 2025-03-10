@@ -6,68 +6,72 @@
 /*   By: mecetink <mecetink@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 14:43:57 by mecetink          #+#    #+#             */
-/*   Updated: 2025/03/08 17:47:16 by mecetink         ###   ########.fr       */
+/*   Updated: 2025/03/10 16:26:35 by mecetink         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (*str++)
-	{
+	while (str[i])
 		i++;
-	}
 	return (i);
 }
 
-char *ft_strjoin(int size, char **strs, char *sep)
+void	cat(int size, char **strs, char *temp, char *sep)
 {
-	if (size == 0)
-	{
-		char *temp = (char *)malloc(1);
-		temp[0] = '\0';
-		return (temp);
-	}
-	int totallen = 0;
-	int sepcount = ft_strlen(sep);
-	int i = 0;
-	int j = 0;
-	int pos = 0;
-	while (i < size)
-	{
-		totallen += ft_strlen(strs[i]);
-		i++;
-	}
-	totallen += sepcount * (size - 1);
-	char *result = (char *)malloc(sizeof(char) * (totallen + 1));
-	if (result == NULL)
-		return (NULL);
-	i = 0;
-	while (i < size)
+	int	i;
+	int	j;
+	int	pos;
+
+	pos = 0;
+	i = -1;
+	while (++i < size)
 	{
 		j = 0;
 		while (strs[i][j])
-			result[pos++] = strs[i][j++];
+			temp[pos++] = strs[i][j++];
 		if (i < size - 1)
 		{
 			j = 0;
 			while (sep[j])
-				result[pos++] = sep[j++];
+				temp[pos++] = sep[j++];
 		}
-		i++;
 	}
-	result[pos] = 0;
-	return (result);
+	temp[pos] = 0;
 }
 
-int main()
+char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	char *strs[] = {"mert", "can", "se", "lam"};
-	char *res = ft_strjoin(4, strs, ", ");
-	printf("%s", res);
+	char	*temp;
+	int		totallen;
+	int		i;
+
+	if (size == 0)
+	{		
+		temp = (char *) malloc(1);
+		temp[0] = '\0';
+		return (temp);
+	}
+	totallen = 0;
+	i = 0;
+	while (i < size)
+		totallen += ft_strlen(strs[i++]);
+	totallen += ft_strlen(sep) * (size - 1);
+	temp = (char *) malloc(sizeof(char) * (totallen + 1));
+	if (temp == NULL)
+		return (NULL);
+	cat(size, strs, temp, sep);
+	return (temp);
 }
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	char *strs[] = {"mert", "can", "se", "lam"};
+// 	char *res = ft_strjoin(4, strs, ",");
+// 	printf("%s", res);
+// } 
