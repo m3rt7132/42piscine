@@ -6,7 +6,7 @@
 /*   By: mecetink <mecetink@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 15:15:31 by mecetink          #+#    #+#             */
-/*   Updated: 2025/03/10 09:51:23 by mecetink         ###   ########.fr       */
+/*   Updated: 2025/03/11 10:50:27 by mecetink         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,12 @@ int	ft_ultimate_range(int **range, int min, int max)
 	}
 	return (max - min);
 }
-
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	int	*range;
 // 	int	size;
 // 	int	i;
-
 // 	size = ft_ultimate_range(&range, 1, 10);
 // 	if (size == -1)
 // 	{

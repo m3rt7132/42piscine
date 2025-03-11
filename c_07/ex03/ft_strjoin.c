@@ -6,7 +6,7 @@
 /*   By: mecetink <mecetink@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 14:43:57 by mecetink          #+#    #+#             */
-/*   Updated: 2025/03/10 16:26:35 by mecetink         ###   ########.fr       */
+/*   Updated: 2025/03/11 10:54:41 by mecetink         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,5 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 // 	char *strs[] = {"mert", "can", "se", "lam"};
 // 	char *res = ft_strjoin(4, strs, ",");
 // 	printf("%s", res);
+// 	free(res);
 // } 
