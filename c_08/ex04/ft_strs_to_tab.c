@@ -6,17 +6,17 @@
 /*   By: mecetink <mecetink@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 10:59:11 by mecetink          #+#    #+#             */
-/*   Updated: 2025/03/12 12:00:51 by mecetink         ###   ########.fr       */
+/*   Updated: 2025/03/13 15:25:15 by mecetink         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "ft_stock_str.h"
 typedef struct s_stock_str
 {
-int size;
-char *str;
-char *copy;
-} t_stock_str;
+	int size;
+	char *str;
+	char *copy;
+}	t_stock_str;
 
 #include <stdlib.h>
 
@@ -79,9 +79,9 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 // #include <stdio.h>
 // int main(int argc, char *argv[])
 // {
-//		t_stock_str *arr;
+// 	t_stock_str *arr;
 // 	int i = 0;
-	// arr = ft_strs_to_tab(argc - 1, argv + 1);
+// 	arr = ft_strs_to_tab(argc - 1, argv + 1);
 // 	if (arr == NULL) return printf("ram null");
 // 	while (arr[i].str)
 // 	{
