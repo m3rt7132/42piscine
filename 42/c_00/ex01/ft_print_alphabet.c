@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mecetink<mecetink@student.42kocaeli.       +#+  +:+       +#+        */
+/*   By: mecetink<mecetink@student.42kocaeli.com.tr +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 14:15:28 by mecetink          #+#    #+#             */
-/*   Updated: 2025/02/20 14:15:52 by mecetink         ###   ########.fr       */
+/*   Created: 2025/02/20 14:12:21 by mecetink          #+#    #+#             */
+/*   Updated: 2025/02/20 14:13:22 by mecetink         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void ft_print_alphabet(void)
 {
-	int	number;
+	char character;
 
-	number = '0';
-	while (number <= '9')
-	{
-		write(1, &number, 1);
-		number++;
-	}
+	character = 97;
+	while (character++ <= 122)
+		write(1, &character, 1);
+}
+int main(void)
+{
+	ft_print_alphabet();
 }

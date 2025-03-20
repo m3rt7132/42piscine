@@ -1,9 +1,0 @@
-{
-	"files.associations": {
-		"chrono": "c",
-		"functional": "c",
-		"ft_boolean.h": "c",
-		"ft_point.h": "c",
-		"stdio.h": "c"
-	}
-}

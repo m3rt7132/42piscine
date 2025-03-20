@@ -17,11 +17,11 @@ typedef struct s_stock_str
 	int size;
 	char *str;
 	char *copy;
-}	t_stock_str;
+} t_stock_str;
 
-void	ft_putnbr(int n)
+void ft_putnbr(int n)
 {
-	char	c;
+	char c;
 
 	if (n > 9)
 		ft_putnbr(n / 10);
@@ -29,18 +29,18 @@ void	ft_putnbr(int n)
 	write(1, &c, 1);
 }
 
-void	ft_putstr(char *str)
+void ft_putstr(char *str)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (str[i])
 		write(1, &str[i++], 1);
 }
 
-void	ft_show_tab(struct s_stock_str *par)
+void ft_show_tab(struct s_stock_str *par)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (par[i].str)

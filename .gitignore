@@ -1,2 +1,29 @@
-.vscode
+# Derlenmiş dosyalar
+*.class
+*.exe
+*.dll
+
+# Log dosyaları
+*.log
 .git
+.dist
+
+# IDE özel dosyaları
+.idea/
+.vscode/
+
+# Bağımlılık klasörleri
+node_modules/
+vendor/
+
+# Geçici dosyalar
+*.tmp
+*.temp
+*.pdf
+
+# Hassas bilgiler
+.env
+config/secrets.yml
+
+# İstisna kuralı
+!important.log
