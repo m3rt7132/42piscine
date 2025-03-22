@@ -27,6 +27,6 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		i++;
 		j++;
 	}
-	dest[i] = '\0';
+	dest[i] = 0;
 	return (dest);
 }

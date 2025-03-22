@@ -24,13 +24,13 @@ void	ft_print_comb2(void)
 		second = first + 1;
 		while (second <= 99)
 		{
-			str[0] = (first / 10) + '0';
-			str[1] = (first % 10) + '0';
+			str[0] = (first / 10) + 48;
+			str[1] = (first % 10) + 48;
 			str[2] = ' ';
-			str[3] = (second / 10) + '0';
-			str[4] = (second % 10) + '0';
+			str[3] = (second / 10) + 48;
+			str[4] = (second % 10) + 48;
 			write(1, str, 5);
-			if (!(first == 98 && second == 99))
+			if (first != 98)
 				write(1, ", ", 2);
 			second++;
 		}

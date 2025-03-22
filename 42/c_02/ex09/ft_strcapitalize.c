@@ -12,13 +12,13 @@
 
 int	is_alphanumeric(char n, char c)
 {
-	if (c == 'l' && ('a' <= n && n <= 'z'))
+	if (c == 'l' && ('a' <= n && n <= 'z')) // low
 		return (1);
-	else if (c == 'u' && ('A' <= n && n <= 'Z'))
+	else if (c == 'u' && ('A' <= n && n <= 'Z')) // uppercase
 		return (1);
-	else if (c == 'n' && ('0' <= n && n <= '9'))
+	else if (c == 'n' && ('0' <= n && n <= '9')) //numeric
 		return (1);
-	else if (c == 'a' && (('a' <= n && n <= 'z') || ('A' <= n && n <= 'Z')
+	else if (c == 'a' && (('a' <= n && n <= 'z') || ('A' <= n && n <= 'Z') // allphanumeric
 			|| ('0' <= n && n <= '9')))
 		return (1);
 	else

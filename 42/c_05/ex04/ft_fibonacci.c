@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static long int memo[10000];
+long int memo[500];
 
 long int	ft_fibonacci(int index)
 {
@@ -27,14 +27,11 @@ long int	ft_fibonacci(int index)
 	memo[index] = (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 	return memo[index];
 }
-
-#include <stdio.h>
-int main() {
-	for (int i = 0; i < 10000; i++)
-	{
-		memo[i] = -1;
-	}
-	
-
-	printf("%ld", ft_fibonacci(150));     
-}
+// #include <stdio.h>
+// int main() {
+// 	for (int i = 0; i < 500; i++)
+// 	{
+// 		memo[i] = -1;
+// 	}
+// 	printf("%ld", ft_fibonacci(166)); // max possible long int     
+// }

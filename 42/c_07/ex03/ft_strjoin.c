@@ -54,7 +54,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	if (size == 0)
 	{		
 		temp = (char *) malloc(1);
-		temp[0] = '\0';
+		temp[0] = 0;
 		return (temp);
 	}
 	totallen = 0;

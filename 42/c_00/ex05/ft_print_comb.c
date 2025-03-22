@@ -18,19 +18,19 @@ void	ft_print_comb(void)
 	int	secnd;
 	int	third;
 
-	first = '0';
-	while (first <= '7')
+	first = 48;
+	while (first <= 55)
 	{
 		secnd = first + 1;
-		while (secnd <= '8')
+		while (secnd <= 56)
 		{
 			third = secnd + 1;
-			while (third <= '9')
+			while (third <= 57)
 			{
 				write(1, &first, 1);
 				write(1, &secnd, 1);
 				write(1, &third, 1);
-				if (first != '7')
+				if (first != 55)
 					write(1, ", ", 2);
 				third++;
 			}

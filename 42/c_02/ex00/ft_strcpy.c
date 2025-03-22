@@ -20,6 +20,17 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = src[i];
+	dest[i] = 0;
 	return (dest);
 }
+
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	char src[] = "Hello, World!";
+// 	char dest[20];
+
+// 	ft_strcpy(dest, src);
+// 	printf("%s\n", dest);
+// 	return (0);
+// }

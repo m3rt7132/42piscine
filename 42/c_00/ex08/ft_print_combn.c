@@ -12,49 +12,36 @@
 
 #include <unistd.h>
 
-// line 25 exceeded, used a new function, print all combinations
-void	ft_print_combs(char*combs, int n, int i)
+void ft_print_combn(int n)
 {
-	while (1)
-	{
-		write(1, combs, n);
-
-		if (combs[0] == ('9' - n + 1))
-			break ;
-
-		write(1, ", ", 2);
-
-		i = n - 1;
-
-		while (i >= 0 && combs[i] == ('9' - (n - 1 - i)))
-			i--;
-
-		combs[i]++;
-		while (++i < n)
-			combs[i] = combs[i - 1] + 1;
-	}
-}
-
-void	ft_print_combn(int n)
-{
-	char	combs[10];
-	int		i;
+	char comb[10];
+	int i;
 
 	if (n <= 0 || n >= 10)
-		return ;
-
+		return;
 	i = 0;
-
-	while (i < n)
+	while (i < n) // create first comb (012)
 	{
-		combs[i] = i + '0';
+		comb[i] = i + '0';
 		i++;
 	}
-
-	ft_print_combs(combs, n, i);
+	while (1)
+	{
+		write(1, comb, n);
+		if (comb[0] == '9' - n + 1) // stop if its last combination
+			break;
+		write(1, ", ", 2);
+		i = n - 1;
+		while (i >= 0 && comb[i] == '9' - (n - 1 - i)) // find next combination
+			i--;
+		comb[i]++;		// increase found digit
+		while (++i < n) // update rest of digit
+			comb[i] = comb[i - 1] + 1;
+	}
 }
 
-int main() {
-ft_print_combn(9);
-return 0;
+int main()
+{
+	ft_print_combn(5);
+	return 0;
 }

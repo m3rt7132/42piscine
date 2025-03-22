@@ -20,7 +20,3 @@ void ft_print_reverse_alphabet(void)
 	while (lc-- >= 98)
 		write(1, &lc, 1);
 }
-// int main(void)
-// {
-// 	ft_print_reverse_alphabet();
-// }
